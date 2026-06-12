@@ -1,11 +1,18 @@
 'use client';
 import { useEffect, useState } from 'react';
+
+interface Estacao {
+  name: string;
+  address: string;
+  status: string;
+  pricePerKwh?: string | number;
+}
 import { useRouter } from 'next/navigation';
 
 export default function HomePage() {
   const router = useRouter();
   const [user, setUser] = useState<{name?: string; email?: string} | null>(null);
-  const [estacoes, setEstacoes] = useState<any[]>([]);
+  const [estacoes, setEstacoes] = useState<Estacao[]>([]);
 
   useEffect(() => {
     const token = localStorage.getItem('electra_token');
