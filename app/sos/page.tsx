@@ -6,7 +6,7 @@ export default function SOSPage() {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
   const [enviado, setEnviado] = useState(false);
-  const [localizacao, setLocalizacao] = useState(null);
+  const [localizacao, setLocalizacao] = useState<{lat: number; lng: number} | null>(null);
   const [descricao, setDescricao] = useState('');
 
   useEffect(() => {
