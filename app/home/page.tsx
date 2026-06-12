@@ -4,8 +4,8 @@ import { useRouter } from 'next/navigation';
 
 export default function HomePage() {
   const router = useRouter();
-  const [user, setUser] = useState(null);
-  const [estacoes, setEstacoes] = useState([]);
+  const [user, setUser] = useState<{name?: string; email?: string} | null>(null);
+  const [estacoes, setEstacoes] = useState<any[]>([]);
 
   useEffect(() => {
     const token = localStorage.getItem('electra_token');
