@@ -23,6 +23,7 @@ export default function PerfilPage() {
       <div style={{ padding: '24px 20px', textAlign: 'center' }}>
         <div style={{ width: 80, height: 80, borderRadius: '50%', background: 'rgba(0,229,255,0.15)', border: '2px solid #00E5FF', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 16px', fontSize: 32 }}>👤</div>
         <h2 style={{ color: '#EEF2F7', fontSize: 22, fontWeight: 700 }}>{user?.name}</h2>
+        <button onClick={() => router.push('/perfil/editar')} style={{ background: 'transparent', border: 'none', color: '#00E5FF', fontSize: 13, cursor: 'pointer', marginTop: 4 }}>✏️ Editar perfil</button>
         <p style={{ color: 'rgba(238,242,247,0.4)', fontSize: 14 }}>{user?.email}</p>
       </div>
 
@@ -39,11 +40,11 @@ export default function PerfilPage() {
 
       <div style={{ padding: '0 20px' }}>
         {[
-          { icon: '🚗', label: 'Meus Veículos' },
-          { icon: '📋', label: 'Histórico de Recargas' },
-          { icon: '💳', label: 'Métodos de Pagamento' },
-          { icon: '🔔', label: 'Notificações' },
-          { icon: '⚙️', label: 'Configurações' },
+          { icon: '🚗', label: 'Meus Veículos', href: '/perfil/veiculos' },
+          { icon: '📋', label: 'Histórico de Recargas', href: '/perfil/historico' },
+          { icon: '💳', label: 'Métodos de Pagamento', href: '/perfil/pagamentos' },
+          { icon: '🔔', label: 'Notificações', href: '/perfil/notificacoes' },
+          { icon: '⚙️', label: 'Configurações', href: '/perfil/configuracoes' },
         ].map((item, i) => (
           <div key={i} style={{ background: '#111620', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 12, padding: '14px 16px', marginBottom: 10, display: 'flex', alignItems: 'center', gap: 12 }}>
             <span style={{ fontSize: 20 }}>{item.icon}</span>
