@@ -115,6 +115,7 @@ export default function EstacoesPage() {
           </>
         ) : (
           <div style={{ overflowY: 'auto', height: '100%', padding: '0 16px 80px' }}>
+            <button onClick={() => setView('map')} style={{ width: '100%', padding: '10px', background: 'rgba(0,229,255,0.1)', border: '1px solid rgba(0,229,255,0.2)', borderRadius: 12, color: '#00E5FF', fontSize: 13, fontWeight: 600, cursor: 'pointer', marginBottom: 12 }}>🗺 Ver no mapa</button>
             {stations.map((s, i) => (
               <div key={i} onClick={() => setView('map')} style={{ background: '#1A1E25', border: '1px solid rgba(255,255,255,0.07)', borderRadius: 16, padding: 16, marginBottom: 10, cursor: 'pointer' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 8 }}>
