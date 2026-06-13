@@ -57,7 +57,7 @@ export default function PerfilPage() {
       </div>
 
       <div style={{ position: 'fixed', bottom: 0, left: '50%', transform: 'translateX(-50%)', width: '100%', maxWidth: 430, background: '#0D1117', borderTop: '1px solid rgba(255,255,255,0.08)', display: 'flex', padding: '10px 0' }}>
-        {[['🏠','Home','/home'],['⚡','Recargar','/recarga'],['🆘','SOS','/sos'],['👤','Perfil','/perfil']].map(([icon,label,href]) => (
+        {[['🏠','Home','/home'],['🗺','Estações','/estacoes'],['🆘','SOS','/sos'],['👤','Perfil','/perfil']].map(([icon,label,href]) => (
           <button key={href} onClick={() => router.push(href as string)} style={{ flex: 1, background: 'transparent', color: href === '/perfil' ? '#00E5FF' : 'rgba(238,242,247,0.4)', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 2, fontSize: 10, padding: '4px 0', border: 'none', cursor: 'pointer' }}>
             <span style={{ fontSize: 20 }}>{icon}</span>{label}
           </button>

@@ -130,7 +130,7 @@ export default function SOSPage() {
 
       {/* Bottom Nav */}
       <div style={{ background: '#0D1117', borderTop: '1px solid rgba(255,255,255,0.07)', display: 'flex', padding: '8px 0 10px' }}>
-        {[['🏠','Home','/home'],['⚡','Recargar','/recarga'],['🆘','SOS','/sos'],['👤','Perfil','/perfil']].map(([icon,label,href])=>(
+        {[['🏠','Home','/home'],['🗺','Estações','/estacoes'],['🆘','SOS','/sos'],['👤','Perfil','/perfil']].map(([icon,label,href])=>(
           <button key={href} onClick={()=>router.push(href as string)} style={{ flex:1, background:'transparent', border:'none', color: href==='/sos'?'#FF3B5C':'rgba(238,242,247,0.38)', display:'flex', flexDirection:'column', alignItems:'center', gap:2, fontSize:10, cursor:'pointer' }}>
             <span style={{ fontSize:20 }}>{icon}</span>{label}
           </button>
