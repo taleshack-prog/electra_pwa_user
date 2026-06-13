@@ -46,7 +46,7 @@ export default function PerfilPage() {
           { icon: '🔔', label: 'Notificações', href: '/perfil/notificacoes' },
           { icon: '⚙️', label: 'Configurações', href: '/perfil/configuracoes' },
         ].map((item, i) => (
-          <div key={i} style={{ background: '#111620', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 12, padding: '14px 16px', marginBottom: 10, display: 'flex', alignItems: 'center', gap: 12 }}>
+          <div key={i} onClick={() => item.href && router.push(item.href)} style={{ background: '#111620', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 12, padding: '14px 16px', marginBottom: 10, display: 'flex', alignItems: 'center', gap: 12, cursor: 'pointer' }}>
             <span style={{ fontSize: 20 }}>{item.icon}</span>
             <span style={{ color: '#EEF2F7', fontSize: 15 }}>{item.label}</span>
             <span style={{ marginLeft: 'auto', color: 'rgba(238,242,247,0.3)' }}>›</span>
