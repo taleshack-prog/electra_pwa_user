@@ -2,6 +2,7 @@
 import { useEffect, useState, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import 'leaflet/dist/leaflet.css';
+import ElectraVoice from '../components/ElectraVoice';
 
 interface Station {
   id: string;
@@ -168,6 +169,8 @@ export default function HomePage() {
           </div>
         </button>
       </div>
+
+      <ElectraVoice />
 
       {/* Bottom Nav */}
       <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, background: '#0D1117', borderTop: '1px solid rgba(255,255,255,0.07)', display: 'flex', padding: '8px 0 10px', zIndex: 100 }}>
