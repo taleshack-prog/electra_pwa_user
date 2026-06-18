@@ -20,19 +20,19 @@ export default function ConfirmarSocorroPage() {
     setConfirmando(true);
     const token = localStorage.getItem('electra_token');
     try {
-      await fetch('https://electra-dashboard-steel.vercel.app/api/sos', {
+      const r = await fetch('https://electra-dashboard-steel.vercel.app/api/sos', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + token },
         body: JSON.stringify({ latitude: -30.0346, longitude: -51.2177, address: 'Porto Alegre, RS', description: PROBLEMAS.find(p=>p.id===problema)?.label, urgencyLevel: 'high' }),
       });
-      // Chama despacho IA — encontra resgatista mais próximo
-      try {
+      const d = await r.json();
+      if (d.id) {
         await fetch('https://electra-dashboard-steel.vercel.app/api/sos/despacho', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ sosId: sosId }),
-        });
-      } catch {}
+          body: JSON.stringify({ sosId: d.id }),
+        }).catch(() => {});
+      }
     } catch {}
     setConfirmando(false);
     router.push('/tracking');
