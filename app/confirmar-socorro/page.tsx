@@ -30,7 +30,7 @@ export default function ConfirmarSocorroPage() {
         await fetch('https://electra-dashboard-steel.vercel.app/api/sos/despacho', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ sosId: d.id }),
+          body: JSON.stringify({ sosId: sosId }),
         });
       } catch {}
     } catch {}
