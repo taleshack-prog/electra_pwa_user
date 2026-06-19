@@ -39,7 +39,7 @@ export default function ConfirmarSocorroPage() {
   };
 
   return (
-    <div style={{ minHeight: '100vh', background: '#070B14', color: '#EEF2F7', fontFamily: 'sans-serif', maxWidth: 430, margin: '0 auto' }}>
+    <div style={{ minHeight: '100vh', background: '#070B14', color: '#EEF2F7', fontFamily: 'system-ui, -apple-system, sans-serif', maxWidth: 430, margin: '0 auto' }}>
       <div style={{ padding: '16px 16px 0', display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 16 }}>
         <button onClick={() => router.back()} style={{ width: 36, height: 36, borderRadius: 18, background: '#1A2236', border: '1px solid rgba(255,255,255,0.08)', color: 'rgba(238,242,247,0.6)', fontSize: 18, cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>←</button>
         <div style={{ fontSize: 17, fontWeight: 700 }}>Confirmar Socorro</div>

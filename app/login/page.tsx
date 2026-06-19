@@ -32,7 +32,7 @@ export default function LoginPage() {
   return (
     <div style={{ minHeight: '100vh', background: '#070B14', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: 24 }}>
       <div style={{ fontSize: 56, marginBottom: 8 }}>⚡</div>
-      <h1 style={{ fontFamily: 'sans-serif', fontSize: 28, fontWeight: 800, color: '#00E5FF', marginBottom: 4 }}>ELECTRA</h1>
+      <h1 style={{ fontFamily: 'system-ui, -apple-system, sans-serif', fontSize: 28, fontWeight: 800, color: '#00E5FF', marginBottom: 4 }}>ELECTRA</h1>
       <p style={{ color: 'rgba(238,242,247,0.4)', fontSize: 13, marginBottom: 40 }}>EV Charging Platform</p>
 
       <div style={{ width: '100%', maxWidth: 380 }}>

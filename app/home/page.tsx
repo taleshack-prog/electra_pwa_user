@@ -84,7 +84,7 @@ export default function HomePage() {
   }, [mapReady, stations]);
 
   return (
-    <div style={{ height: '100vh', background: '#0C0E12', color: '#EEF2F7', fontFamily: 'sans-serif', display: 'flex', flexDirection: 'column', maxWidth: 430, margin: '0 auto', position: 'relative', overflow: 'hidden' }}>
+    <div style={{ height: '100vh', background: '#0C0E12', color: '#EEF2F7', fontFamily: 'system-ui, -apple-system, sans-serif', display: 'flex', flexDirection: 'column', maxWidth: 430, margin: '0 auto', position: 'relative', overflow: 'hidden' }}>
 
       {/* MAPA TELA INTEIRA */}
       <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '52vh' }}>

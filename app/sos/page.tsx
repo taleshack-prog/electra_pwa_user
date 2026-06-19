@@ -51,7 +51,7 @@ export default function SOSPage() {
   const strokeDashoffset = circunferencia * (1 - progresso / 100);
 
   return (
-    <div style={{ height: '100vh', background: '#070B14', color: '#EEF2F7', fontFamily: 'sans-serif', display: 'flex', flexDirection: 'column', maxWidth: 430, margin: '0 auto', position: 'relative', overflow: 'hidden' }}>
+    <div style={{ height: '100vh', background: '#070B14', color: '#EEF2F7', fontFamily: 'system-ui, -apple-system, sans-serif', display: 'flex', flexDirection: 'column', maxWidth: 430, margin: '0 auto', position: 'relative', overflow: 'hidden' }}>
       {/* Glow vermelho fundo */}
       <div style={{ position: 'absolute', width: 400, height: 400, borderRadius: '50%', background: 'rgba(255,59,92,0.05)', top: '20%', left: '50%', transform: 'translateX(-50%)', pointerEvents: 'none' }} />
 
